@@ -27,6 +27,10 @@ class ItemModelTest(TestCase):
 
 class HomePageTest(TestCase):
 
+    def test_only_saves_items_when_necessary(self):
+        self.client.get('/')
+        self.assertEqual(Item.objects.count(), 0)
+
     def test_root_url_resolves_to_home_page_view(self):
         found = resolve('/')
         self.assertEqual(found.func, home_page)
@@ -52,8 +56,8 @@ class HomePageTest(TestCase):
         new_item = Item.objects.first()
         self.assertEqual(new_item.text, 'A new list item')
 
-        self.assertIn('A new list item', response.content.decode())
-        self.assertTemplateUsed(response, 'home.html')
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(response['location'], '/')
 
     def check_for_row_in_list_table(self, row_text):
         table = self.browser.find_element_by_id('id_list_table')
