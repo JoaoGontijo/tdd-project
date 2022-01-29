@@ -2,3 +2,29 @@
 1643240357740	geckodriver	INFO	Listening on 127.0.0.1:53191
 1643240429628	geckodriver	INFO	Listening on 127.0.0.1:53210
 1643240569745	geckodriver	INFO	Listening on 127.0.0.1:53235
+1643418658139	geckodriver	INFO	Listening on 127.0.0.1:49990
+1643418783219	geckodriver	INFO	Listening on 127.0.0.1:60785
+1643418803134	geckodriver	INFO	Listening on 127.0.0.1:60795
+1643418836701	geckodriver	INFO	Listening on 127.0.0.1:60809
+1643419075940	geckodriver	INFO	Listening on 127.0.0.1:60937
+1643419078990	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\joaod\\AppData\\Local\\Temp\\rust_mozprofilenqr3oC"
+1643419079797	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joaod\\AppData\\Local\\Temp\\rust_mozprofilenqr3oC\\search.json.mozlz4", (void 0)))
+1643419083989	Marionette	INFO	Listening on port 60945
+1643419084451	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1643419084594	Marionette	INFO	Stopped listening on port 60945
+console.warn: services.settings: main/partitioning-exempt-urls sync interrupted by shutdown
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1643419279040	geckodriver	INFO	Listening on 127.0.0.1:51273
+1643419282108	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\joaod\\AppData\\Local\\Temp\\rust_mozprofile0526Z3"
+1643419282844	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joaod\\AppData\\Local\\Temp\\rust_mozprofile0526Z3\\search.json.mozlz4", (void 0)))
+1643419287294	Marionette	INFO	Listening on port 51281
+1643419287482	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1643419287635	Marionette	INFO	Stopped listening on port 51281
+console.warn: services.settings: main/partitioning-exempt-urls sync interrupted by shutdown
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
