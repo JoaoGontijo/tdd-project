@@ -83,12 +83,14 @@ class HomePageTest(TestCase):
         self.wait_for_row_in_list_table('1: Estudar testes funcionais')
         self.wait_for_row_in_list_table('2: Estudar testes de unidade')
         ...
-    
-    def test_displays_all_list_items(self):
+
+class ListViewTest(TestCase):
+
+    def test_displays_all_items(self):
         Item.objects.create(text='itemey 1')
         Item.objects.create(text='itemey 2')
 
-        response = self.client.get('/')
+        response = self.client.get('/lists/the-only-list-in-the-world/')
 
-        self.assertIn('itemey 1', response.content.decode())
-        self.assertIn('itemey 2', response.content.decode())
+        self.assertContains(response, 'itemey 1')
+        self.assertContains(response, 'itemey 2')
