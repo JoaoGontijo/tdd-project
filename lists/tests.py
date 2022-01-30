@@ -60,7 +60,7 @@ class HomePageTest(TestCase):
         response = self.client.post('/', data={'item_text': 'A new list item'})
 
         self.assertEqual(response.status_code, 302)
-        self.assertEqual(response['location'], '/')
+        self.assertEqual(response['location'], '/lists/the-only-list-in-the-world/')
 
     def check_for_row_in_list_table(self, row_text):
         table = self.browser.find_element_by_id('id_list_table')
