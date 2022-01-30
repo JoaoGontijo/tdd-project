@@ -71,19 +71,17 @@ class HomePageTest(TestCase):
         # Quando ela aperta enter, a página atualiza, e mostra a lista
         # "1: Estudar testes funcionais" como um item da lista TODO
         inputbox.send_keys(Keys.ENTER)
-        time.sleep(1)
-        self.check_for_row_in_list_table('1: Estudar testes funcionais')
+        self.wait_for_row_in_list_table('1: Estudar testes funcionais')
         
         # Ainda existe uma caixa de texto convidando para adicionar outro item
         # Ela digita: "Estudar testes de unidade"
         inputbox = self.browser.find_element_by_id('id_new_item')  
         inputbox.send_keys('Estudar testes de unidade')
         inputbox.send_keys(Keys.ENTER)
-        time.sleep(1)
 
         # A página atualiza novamente, e agora mostra ambos os itens na sua lista
-        self.check_for_row_in_list_table('1: Estudar testes funcionais')
-        self.check_for_row_in_list_table('2: Estudar testes de unidade')
+        self.wait_for_row_in_list_table('1: Estudar testes funcionais')
+        self.wait_for_row_in_list_table('2: Estudar testes de unidade')
         ...
     
     def test_displays_all_list_items(self):
